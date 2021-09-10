@@ -29,8 +29,9 @@ ensure_vpn("mullvad") # raises VPNNotConnectedException if you're not connected.
 # rest of your script goes here
 ```
 You can also use a custom IP or subnet:
-
+```
 ensure_vpn("2.235.200.110") # or e.g. "2.235.200.0/24"
+```
 You can also use the decorator to run the check every time before running a specific function. This is to make sure you don't run untrusted code if you lose your VPN connection after starting your program.
 
 Note that this can be resource intensive depending on how often you call your function so it may slow down your program considerably or get you rate-limited by the services used by this script.
